@@ -14,7 +14,7 @@ class TagViewSet(viewsets.GenericViewSet,
     authentication_classes = (TokenAuthentication, )
     permission_classes = (IsAuthenticated, )
     queryset = Tag.objects.all()
-    serializer_class = serializers.TagSelializer
+    serializer_class = serializers.TagSerializer
 
     def get_queryset(self):
         '''現在、認証済みのユーザのタグリストを返す
