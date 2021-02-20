@@ -26,14 +26,14 @@ class BaseRecipeAttrViewSet(viewsets.GenericViewSet,
 
 
 class TagViewSet(BaseRecipeAttrViewSet):
-    '''tagDB管理View
+    '''DB内のtagを管理するView
     '''
     queryset = Tag.objects.all()
     serializer_class = serializers.TagSerializer
 
 
 class IngredientViewSet(BaseRecipeAttrViewSet):
-    '''IngredientDB管理View
+    '''DB内のIngredientを管理するView
     '''
     queryset = Ingredient.objects.all()
     serializer_class = serializers.IngredientSerializer
