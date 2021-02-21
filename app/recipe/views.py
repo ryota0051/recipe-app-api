@@ -53,7 +53,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
         return self.queryset.filter(user=self.request.user)
 
     def get_serializer_class(self):
-        '''
+        '''指定レシピ取得時は、RecipeDetailSerializerを返す。
         '''
         if self.action == 'retrieve':
             return serializers.RecipeDetailSerializer
